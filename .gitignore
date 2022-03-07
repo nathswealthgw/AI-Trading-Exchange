@@ -1,0 +1,32 @@
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Rust
+target/
+**/*.rs.bk
+Cargo.lock
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
+
+# Data
+*.db
+*.sqlite
