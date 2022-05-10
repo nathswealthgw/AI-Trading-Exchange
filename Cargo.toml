@@ -1,0 +1,3 @@
+[workspace]
+members = ["backend", "wasm-charts"]
+resolver = "2"
