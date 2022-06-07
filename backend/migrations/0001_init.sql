@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS portfolios (
+  id UUID PRIMARY KEY,
+  owner_id UUID NOT NULL,
+  cash_balance NUMERIC(18, 4) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS trades (
+  id UUID PRIMARY KEY,
+  portfolio_id UUID NOT NULL,
+  symbol TEXT NOT NULL,
+  side TEXT NOT NULL,
+  quantity NUMERIC(18, 8) NOT NULL,
+  price NUMERIC(18, 8) NOT NULL,
+  executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
