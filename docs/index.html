@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Trading Exchange • Live Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <main class="demo-shell">
+      <aside class="sidebar panel">
+        <h1>Naths Xchange</h1>
+
+        <nav aria-label="Demo sections">
+          <a class="menu-link active" href="#dashboard" data-target="dashboard"><span>📊</span>Dashboard</a>
+          <a class="menu-link" href="#order-book" data-target="order-book"><span>📘</span>Order Book</a>
+          <a class="menu-link" href="#portfolio" data-target="portfolio"><span>💼</span>Portfolio</a>
+          <a class="menu-link" href="#ai-signals" data-target="ai-signals"><span>🤖</span>AI Signals</a>
+          <a class="menu-link" href="#history" data-target="history"><span>🕒</span>History</a>
+        </nav>
+
+        <button id="toggle-theme" class="theme-btn" aria-label="Toggle theme">Toggle Theme</button>
+      </aside>
+
+      <section class="content-grid">
+        <article id="dashboard" class="panel card chart-card section">
+          <h2>BTCUSD Momentum</h2>
+          <svg id="chart" viewBox="0 0 600 220" role="img" aria-label="Live market chart"></svg>
+          <div class="metrics">
+            <p><span>Last Price</span><strong id="last-price">$0.00</strong></p>
+            <p><span>24h Change</span><strong id="price-change">+0.00%</strong></p>
+            <p><span>Latency</span><strong id="latency">0ms</strong></p>
+          </div>
+        </article>
+
+        <article id="order-book" class="panel card order-card section">
+          <h2>Order Book</h2>
+          <div class="book-columns">
+            <div>
+              <p class="book-heading">Bids</p>
+              <ul id="bids" class="order-list"></ul>
+            </div>
+            <div>
+              <p class="book-heading">Asks</p>
+              <ul id="asks" class="order-list"></ul>
+            </div>
+          </div>
+        </article>
+
+        <article id="portfolio" class="panel card portfolio-card section">
+          <h2>Portfolio</h2>
+          <div id="portfolio-grid" class="portfolio-grid"></div>
+        </article>
+
+        <article id="ai-signals" class="panel card signal-panel section">
+          <h2>AI Signal Stream</h2>
+          <div id="signal-card" class="signal-card buy">
+            <p id="signal-action">BUY</p>
+            <p id="signal-confidence">Confidence 0%</p>
+            <p id="signal-forecast">Forecast $0.00</p>
+          </div>
+          <ul id="signal-log" class="signal-log"></ul>
+        </article>
+
+        <article id="history" class="panel card history-card section">
+          <h2>Recent Trades</h2>
+          <ul id="trades" class="trade-list"></ul>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <p>© 2022 Nathswealth Georgewill. AI Trading Exchange</p>
+      <p>
+        This is for demonstration purposes only.
+        <a href="https://github.com/nathswealthgw/AI-Trading-Exchange" target="_blank" rel="noopener noreferrer">
+          View Source Code
+        </a>
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
