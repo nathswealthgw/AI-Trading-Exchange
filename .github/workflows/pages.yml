@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'docs/live-demo/**'
+      - 'docs/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -33,7 +33,7 @@ jobs:
       - name: Upload live demo artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/live-demo
+          path: docs/
 
       - name: Deploy to GitHub Pages
         id: deployment
